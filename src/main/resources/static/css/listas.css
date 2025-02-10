@@ -1,0 +1,227 @@
+/* Reset y variables globales */
+:root {
+    --primary-color: #4b2ecc;
+    --secondary-color: #4b2ecc;
+    --accent-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --footer-bg: #4b2ecc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header y Navegación */
+header {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+}
+
+nav .btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.trabajar {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.trabajar:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.quiero {
+    background-color: var(--accent-color);
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+/* Formulario de búsqueda */
+.input-group {
+    margin-bottom: 2rem;
+}
+
+.form-control {
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+/* Tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Botones */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+    color: #000;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-success {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-info {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: white;
+    padding: 2rem 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.footer-content h3 {
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    nav .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .btn {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.5rem;
+    }
+}

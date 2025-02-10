@@ -78,7 +78,7 @@ public class ContratoControlador {
 
         @GetMapping("/generarPdf")
     public ResponseEntity<byte[]> descargarPdf() throws ExceptionInInitializerError, DocumentException, IOException{
-        byte[] pdf = contratoServicio.generarPdf();
+        byte[] pdf = contratoServicio.generarPdfContratos();
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_PDF);
         headers.setContentDispositionFormData("attachment", "contratos.pdf");

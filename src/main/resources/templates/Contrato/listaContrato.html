@@ -2,11 +2,26 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/listas.css}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Lista de Contratos</title>
 </head>
 <body>
+<header>
+    <nav>
+        <a th:href="@{/}" class="logo">workana</a>
+        <ul>
+            <li><a th:href="@{/formularioProveedor}" class="btn trabajar">Quiero trabajar</a></li>
+            <li><a th:href="@{/formularioCliente}" class="btn quiero">Quiero contratar</a></li>
+            <li><a th:href="@{/formularioPrestaciones}" class="btn trabajar">Prestaciones</a></li>
+            <li><a th:href="@{/formularioResenas}" class="btn trabajar">Reseñas</a></li>
+            <li><a th:href="@{/formularioContratos}" class="btn trabajar">Contrato</a></li>
+            <li><a th:href="@{/nosotros}" class="btn trabajar">Nosotros</a></li>
+        </ul>
+
+    </nav>
+</header>
 
 <div class="container mt-3">
     <h2 class="mb-4 text-center">Lista de Contratos</h2>
@@ -57,6 +72,17 @@
     <a th:href="@{/formularioContratos}" class="btn btn-success">Nuevo Contrato</a>
     <a th:href="@{/generarPdf}" class="btn btn-danger">Descargar PDF</a>
 </div>
+<footer>
+    <div class="footer-content">
+        <h3>Workana</h3>
+        <p>&copy; 2025 Workana. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
+</body>
+</html>
+
 
 </body>
 </html>
